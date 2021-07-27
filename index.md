@@ -2,122 +2,42 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./another-page.html).
+# What is UpStreamI?
 
-There should be whitespace between paragraphs.
+Updating a project dependencies is often a scary and time consuming task, many of us dread the day we need to run `pip install --upgrade` or `flutter upgrade` as often it leads to all sorts of errors requiring time consuming investigations.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+With UpStreamI your project is constantly tested against the development branch of your dependencies, if a dependency change is breaking your project UpStreamI notifies you, pinpointing the exact commit that is breaking your project (where often you'll find a useful description of what needs to be changed in your project). UpStreamI helps package maintainers avoid unintended breaking changes and estimate the impact of a breaking change by notifying them when a change broke a number of dependent projects.
 
-# Header 1
+UpStreamI is [shifting left](https://en.wikipedia.org/wiki/Shift-left_testing) cross-package testing, and reducing engineering overhead across the ecosystem.
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+# Supported languages
 
-## Header 2
+We currently support building projects that use one or more of the following languages:
+  - C/C++
+  - Dart
+  - Golang
+  - Java
+  - Python
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+We're working on adding more toolchains!
 
-### Header 3
+# Does UpStreamI needs access to my code?
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+The easiest way to use UpStreamI is to grant it access to your private repository.
+If you want to install an UpStreamI service on your VPC please reach out to: <beta@upstreami.com>.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+# Is it free?
 
-#### Header 4
+We're charging for the incremental compute resources needed to add your project to our global build graph,
+note that as we're caching intermediate build artifacts across projects you share the cost with other projects with common dependencies.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+The typical monthly cost for a medium-large sized project with about ~400 transitive dependencies is around 80 USD.
 
-##### Header 5
+# How do I use it?
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+We're currently running a closed beta, we are looking to add some more participants!
+If you want to try it out please let us know at <beta@upstreami.com>.
 
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+# Get in touch
+Feel free to reach out at <beta@upstreami.com>
